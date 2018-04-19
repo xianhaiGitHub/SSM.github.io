@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/com/zxh/ssm/controller/EmployeeController.java=UTF-8
+encoding//src/com/zxh/ssm/controller/UserController.java=UTF-8
+encoding//src/com/zxh/ssm/entity/Department.java=UTF-8
+encoding//src/com/zxh/ssm/entity/Employee.java=UTF-8
+encoding//src/com/zxh/ssm/mapper/DepartmentMapper.java=UTF-8
+encoding//src/com/zxh/ssm/mapper/EmployeeMapper.java=UTF-8
+encoding//src/com/zxh/ssm/mapper/UserMapper.java=UTF-8
+encoding//src/com/zxh/ssm/service/DepartmentService.java=UTF-8
+encoding//src/com/zxh/ssm/service/EmployeeService.java=UTF-8
+encoding//src/com/zxh/ssm/service/UserService.java=UTF-8
+encoding//src/com/zxh/ssm/service/impl/DepartmentServiceimpl.java=UTF-8
+encoding//src/com/zxh/ssm/service/impl/EmployeeServiceImpl.java=UTF-8
+encoding//src/com/zxh/ssm/service/impl/UserServiceImpl.java=UTF-8
+encoding//src/com/zxh/ssm/test/SpringTest.java=UTF-8
+encoding//src/com/zxh/ssm/utils/MD5Utils.java=UTF-8
+encoding//src/com/zxh/ssm/utils/StringTools.java=UTF-8

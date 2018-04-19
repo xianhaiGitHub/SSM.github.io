@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<!-- 是否开启自动驼峰命名规则create_time createTime,默认是false -->
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"></setting>
+		<!--开启延迟加载的总开关 -->
+		<setting name="lazyLoadingEnabled" value="true" />
+		<!--开启按需加载的开关 -->
+		<setting name="aggressiveLazyLoading" value="false" />
+
+		<!--开启二级缓存 -->
+		<!-- <setting name="cacheEnabled" value="true" /> -->
+	</settings>
+
+	<typeAliases>
+		<!-- 批量设置别名 -->
+		<package name="com.zxh.ssm.entity" />
+	</typeAliases>
+
+	<!-- 配置pageHelper分页插件 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库 -->
+			<property name="dialect" value="mysql" />
+			<!--当设置为true的时候，如果pagesize设置为0 就不执行分页，返回全部结果 -->
+			<property name="pageSizeZero" value="true" />
+			<!--合理化查询 比如如果pageNum<1会查询第一页;如果pageNum>pages会查询最后一页(设置为false返回空) -->
+			<property name="reasonable" value="false" />
+			<!-- 支持通过Mapper接口参数来传递分页参数 -->
+			<property name="supportMethodsArguments" value="false" />
+			<!-- 总是返回PageInfo类型,check检查返回类型是否为PageInfo,none返回Page -->
+			<property name="returnPageInfo" value="none" />
+		</plugin>
+	</plugins>
+
+
+	<!-- SQL的映射文件 ,applictiuonContext中配置后就不用配置了-->
+	<!-- <mappers>
+		第三种方式， 用package
+		<package name="com.zxh.ssm.mapper" />
+	</mappers> -->
+	
+</configuration>

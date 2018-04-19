@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxh.ssm.mapper.EmployeeMapper">
+
+	<!-- sql片段(字段)用于复用 -->
+	<sql id="emp_column">
+		emp_id, emp_name, gender, email, salary, job_title, dept_id
+	</sql>
+	<!-- 分页查询 -->
+	<select id="getEmplPage" resultType="employee">
+		select  
+		<include refid="emp_column"></include>
+		from employee order by emp_id asc
+	</select>
+	
+	<delete id="deleteEmployee" parameterType="int" >
+		delete from employee where emp_id = #{empId}
+	</delete>
+	
+	<insert id="addEmployee" parameterType="employee">
+		insert into employee (emp_name, gender, email, salary, job_title, dept_id)
+		values(#{empName}, #{gender}, #{email}, #{salary}, #{jobTitle}, #{deptId})
+	</insert>
+	
+	<update id="updateEmployee" parameterType="employee">
+		update employee set emp_name = #{empName}, gender = #{gender}, email = #{email},
+		salary = #{salary}, job_title = #{jobTitle}, dept_id = #{deptId}
+		where emp_id = #{empId}
+	</update>
+	<select id="getEmployee"  parameterType="int" resultType="employee">
+		select
+		<include refid="emp_column"></include>
+		from employee 
+		where emp_id = #{empId}
+	</select>
+</mapper>

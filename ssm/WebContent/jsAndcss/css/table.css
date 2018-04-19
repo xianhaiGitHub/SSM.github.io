@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+h1{
+		text-align:center;
+		color:#999;
+	}
+	table{
+		text-align:center;
+		margin-left:200px;
+		border:1px;
+	}
+	th,a{
+		background:#06c;
+		color:#fff;
+	}
+	table tr:nth-child(odd){
+		background:#F8F8F8;
+		color:#06b;
+		
+	}
+	table tr:nth-child(even){
+		background:#e0e0e0;
+		color:#06c;
+	}
+	table a{
+		display:inline-block;
+		width:50px;
+		height:30px;
+		line-height:30px;
+		text-decoration: none;
+		text-align:center;
+	} 
+	.table-foot{
+		border:none;
+		background:#fff;
+	}
+	.bg-edit{
+		background:#3e3179;
+		color:#fff;
+	}
+	.bg-dele{
+		
+		background:#ff3600;
+		color:#fff;
+	}
+	#btn{
+		width: 50px;
+    	height: 34px;
+		background:#f60;
+	}
